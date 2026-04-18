@@ -1364,6 +1364,7 @@ a {
 .panel-purple { background: linear-gradient(135deg, #8e44ad, #6c3483); color: #fff; }
 .panel-green2 { background: linear-gradient(135deg, #16a085, #0e6655); color: #fff; }
 .panel-teal   { background: linear-gradient(135deg, #2980b9, #1a5276); color: #fff; }
+.panel-blue   { background: linear-gradient(135deg, #2471a3, #1a5276); color: #fff; }
 .panel-orange { background: linear-gradient(135deg, #e67e22, #ca6f1e); color: #fff; }
 
 .dash-panel-icon {
@@ -1961,6 +1962,23 @@ a {
   color: #fff;
 }
 
+.u-ri-extend {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1.5px solid #e67e22;
+  background: transparent;
+  color: #e67e22;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.u-ri-extend:hover {
+  background: #e67e22;
+  color: #fff;
+}
+
 /* Authors */
 .u-authors-grid {
   display: grid;
@@ -2511,4 +2529,254 @@ a {
 .u-avail-mine {
   background: #fff8e1;
   color: #f57f17;
+}
+
+/* ── DUE DATE COUNTDOWN (Now Reading) ── */
+.u-ri-due-block {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.u-ri-due-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.u-due-ok {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #276749;
+  background: #c6f6d5;
+  border-radius: 20px;
+  padding: 2px 10px;
+}
+.u-due-warn {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #7b341e;
+  background: #feebc8;
+  border-radius: 20px;
+  padding: 2px 10px;
+}
+.u-due-overdue {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #742a2a;
+  background: #fed7d7;
+  border-radius: 20px;
+  padding: 2px 10px;
+  animation: pulse-overdue 1.5s ease-in-out infinite;
+}
+@keyframes pulse-overdue {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.65; }
+}
+.u-ri-due-date {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+.u-ri-due-bar-bg {
+  height: 6px;
+  background: var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+.u-ri-due-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+.u-ri-borrow-date {
+  font-family: var(--font-body);
+  font-size: 0.77rem;
+  color: var(--text-secondary);
+}
+
+/* ── PROFILE MODAL ── */
+.u-user-pill {
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.u-user-pill:hover {
+  background: var(--cream-dark);
+  box-shadow: 0 2px 8px rgba(139,94,60,0.13);
+}
+
+.u-profile-modal {
+  max-width: 440px;
+  width: 95%;
+}
+
+.u-profile-avatar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 0 10px;
+  gap: 6px;
+}
+
+.u-profile-big-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--brown);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 700;
+  font-family: var(--font-head);
+  box-shadow: 0 3px 12px rgba(139,94,60,0.25);
+  margin-bottom: 4px;
+}
+
+.u-profile-avatar-name {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.u-profile-avatar-email {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+}
+
+.u-profile-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--cream-dark);
+  margin: 14px 0 18px;
+  gap: 4px;
+}
+
+.u-profile-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 10px 8px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
+  border-radius: 6px 6px 0 0;
+}
+
+.u-profile-tab.active {
+  color: var(--brown-dark);
+  border-bottom-color: var(--brown);
+  font-weight: 600;
+}
+
+.u-profile-tab:hover:not(.active) {
+  color: var(--brown);
+  background: var(--cream);
+}
+
+.u-profile-tab-content {
+  display: block;
+}
+
+.u-profile-msg {
+  min-height: 20px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  border-radius: 7px;
+  padding: 0;
+  transition: all 0.2s;
+}
+.u-profile-msg.error {
+  color: #c53030;
+  background: #fff5f5;
+  padding: 8px 12px;
+}
+.u-profile-msg.success {
+  color: #276749;
+  background: #f0fff4;
+  padding: 8px 12px;
+}
+
+.u-pw-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.u-pw-wrap input {
+  flex: 1;
+  padding-right: 38px;
+}
+.u-pw-toggle {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.55;
+  user-select: none;
+  transition: opacity 0.15s;
+}
+.u-pw-toggle:hover { opacity: 1; }
+
+/* ============================================
+   WELCOME MODAL ENHANCEMENTS
+   ============================================ */
+
+#uWelcomeModal .modal,
+#adminWelcomeModal .modal {
+  border-top: 4px solid var(--brown);
+}
+
+#uWelcomeModal .modal-title,
+#adminWelcomeModal .modal-title {
+  font-size: 20px;
+  color: var(--brown-dark);
+}
+
+/* ============================================
+   RETURN CONDITION SELECT
+   ============================================ */
+
+#uReturnCondition,
+#uBorrowDaysSelect {
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#uReturnCondition:focus,
+#uBorrowDaysSelect:focus {
+  outline: none;
+  border-color: var(--brown);
+  box-shadow: 0 0 0 3px rgba(139, 90, 43, 0.12);
+}
+
+#uReturnDescGroup textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  resize: vertical;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+#uReturnDescGroup textarea:focus {
+  outline: none;
+  border-color: var(--brown);
+  box-shadow: 0 0 0 3px rgba(139, 90, 43, 0.12);
 }

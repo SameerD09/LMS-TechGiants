@@ -7,6 +7,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
 }
 
 $user = $_SESSION['user'];
+$showWelcome = isset($_GET['welcome']) ? 'true' : 'false';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +36,10 @@ $user = $_SESSION['user'];
     <div id="navAdmin" class="nav-item" onclick="switchView('Admin')">
       <span class="nav-icon">⚙️</span> Admin Panel
     </div>
-    <div class="nav-item" onclick="window.location.href='login.php?logout=1'">
+    <div id="navBorrowedBooks" class="nav-item" onclick="switchView('BorrowedBooks')">
+      <span class="nav-icon">📖</span> Borrowed Books
+    </div>
+    <div class="nav-item" onclick="openAdminLogoutConfirm()">
       <span class="nav-icon">🚪</span> Logout
     </div>
 
@@ -70,30 +74,24 @@ $user = $_SESSION['user'];
         </div>
       </div>
 
-      <!-- Dashboard Panels (Student panel removed) -->
+      <!-- Dashboard Panels -->
       <div class="dash-panels">
-        <div class="dash-panel panel-red" onclick="switchView('Admin')">
+        <div class="dash-panel panel-red" onclick="window.location.href='assign_books.php'">
           <div class="dash-panel-icon">📖</div>
           <div class="dash-panel-title">Assign Books</div>
           <div class="dash-panel-sub">Manage</div>
           <div class="dash-panel-link">More info ➜</div>
         </div>
-        <div class="dash-panel panel-yellow" onclick="switchView('Library')">
-          <div class="dash-panel-icon">🏷️</div>
-          <div class="dash-panel-title">Book Category</div>
-          <div class="dash-panel-sub">Browse</div>
+        <div class="dash-panel panel-green" onclick="switchView('ReturnedBooks')">
+          <div class="dash-panel-icon">↩️</div>
+          <div class="dash-panel-title">Returned Books</div>
+          <div class="dash-panel-sub">View Returns</div>
           <div class="dash-panel-link">More info ➜</div>
         </div>
-        <div class="dash-panel panel-green" onclick="switchView('Library')">
-          <div class="dash-panel-icon">📚</div>
-          <div class="dash-panel-title">Books</div>
-          <div class="dash-panel-sub">All Books</div>
-          <div class="dash-panel-link">More info ➜</div>
-        </div>
-        <div class="dash-panel panel-purple" onclick="switchView('Library')">
-          <div class="dash-panel-icon">🏛️</div>
-          <div class="dash-panel-title">Library</div>
-          <div class="dash-panel-sub">Explore</div>
+        <div class="dash-panel panel-blue" onclick="switchView('BorrowedBooks')">
+          <div class="dash-panel-icon">📖</div>
+          <div class="dash-panel-title">Borrowed Books</div>
+          <div class="dash-panel-sub">Active Borrowings</div>
           <div class="dash-panel-link">More info ➜</div>
         </div>
       </div>
@@ -158,6 +156,72 @@ $user = $_SESSION['user'];
       </div>
     </div>
 
+    <!-- RETURNED BOOKS VIEW -->
+    <div id="viewReturnedBooks" class="view">
+      <div class="admin-header">
+        <div class="page-title">Returned Books</div>
+        <button class="btn-sec" onclick="switchView('Dashboard')" style="font-size:0.9rem;padding:8px 18px;">← Back to Dashboard</button>
+      </div>
+
+      <div class="table-card">
+        <table class="admin-table" id="returnedBooksTable">
+          <thead>
+            <tr>
+              <th>Book Title</th>
+              <th>Author</th>
+              <th>Returned By</th>
+              <th>Condition</th>
+              <th>Description</th>
+              <th>Returned At</th>
+            </tr>
+          </thead>
+          <tbody id="returnedBooksBody">
+            <tr><td colspan="6" style="text-align:center;color:var(--text-secondary);padding:32px;">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- BORROWED BOOKS VIEW -->
+    <div id="viewBorrowedBooks" class="view">
+      <div class="admin-header">
+        <div class="page-title">Borrowed Books</div>
+        <button class="btn-sec" onclick="switchView('Dashboard')" style="font-size:0.9rem;padding:8px 18px;">← Back to Dashboard</button>
+      </div>
+
+      <div class="table-card">
+        <table class="admin-table" id="borrowedBooksTable">
+          <thead>
+            <tr>
+              <th>Book Title</th>
+              <th>Author</th>
+              <th>Borrowed By</th>
+              <th>Borrow Date</th>
+              <th>Due Date</th>
+              <th>Days Left</th>
+              <th>Extensions</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody id="borrowedBooksBody">
+            <tr><td colspan="8" style="text-align:center;color:var(--text-secondary);padding:32px;">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- EXTENSION DETAIL MODAL -->
+<div class="modal-overlay" id="extensionDetailModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="extDetailTitle">Extension History</div>
+      <button class="modal-close" onclick="closeModal('extensionDetailModal')">✕</button>
+    </div>
+    <div id="extDetailBorrowInfo" style="background:var(--bg-subtle,#f8f8f6);border-radius:10px;padding:14px 18px;margin-bottom:18px;font-size:0.95rem;color:var(--text-secondary);"></div>
+    <div id="extDetailList"></div>
   </div>
 </div>
 
@@ -267,7 +331,57 @@ $user = $_SESSION['user'];
   </div>
 </div>
 
+<!-- ADMIN WELCOME MODAL -->
+<div class="modal-overlay" id="adminWelcomeModal">
+  <div class="modal modal-sm">
+    <div class="modal-icon">🎉</div>
+    <div class="modal-title" id="adminWelcomeName"></div>
+    <p class="modal-warning" style="color:var(--text-secondary);margin-top:8px;font-size:0.95rem;">You have successfully logged in. Welcome to the TechGiants Admin Panel!</p>
+    <div class="modal-actions">
+      <button class="btn-primary" onclick="closeModal('adminWelcomeModal')">Let's Go!</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN LOGOUT CONFIRM MODAL -->
+<div class="modal-overlay" id="adminLogoutModal">
+  <div class="modal modal-sm">
+    <button class="modal-close-corner" onclick="closeModal('adminLogoutModal')">✕</button>
+    <div class="modal-icon">🚪</div>
+    <div class="modal-title">Confirm Logout</div>
+    <p class="modal-warning">Are you sure you want to log out of the admin panel?</p>
+    <div class="modal-actions">
+      <button class="btn-danger" onclick="window.location.href='login.php?logout=1'">Yes, Logout</button>
+      <button class="btn-sec" onclick="closeModal('adminLogoutModal')">Cancel</button>
+    </div>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
+<script>
+var _adminShowWelcome = <?php echo $showWelcome; ?>;
+var _adminWelcomeName = <?php echo json_encode($user['firstName']); ?>;
+
+function openAdminLogoutConfirm() {
+  document.getElementById('adminLogoutModal').classList.add('open');
+}
+
+window.addEventListener('load', function() {
+  if (_adminShowWelcome) {
+    document.getElementById('adminWelcomeName').textContent = 'Welcome back, ' + _adminWelcomeName + '! 👋';
+    document.getElementById('adminWelcomeModal').classList.add('open');
+  }
+  // handle ?view= param
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('view') === 'Admin') {
+    switchView('Admin');
+  }
+  // ✅ FIX: Added BorrowedBooks view routing
+  if (params.get('view') === 'BorrowedBooks') {
+    switchView('BorrowedBooks');
+  }
+});
+</script>
 <script src="admin_dashboard.js"></script>
 
 </body>
