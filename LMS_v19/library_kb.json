@@ -1,0 +1,1236 @@
+{
+  "version": "1.0",
+  "intents": [
+    {
+      "id": "greeting",
+      "keywords": ["hello", "hi", "hey", "good morning", "good afternoon", "good evening", "howdy", "what can you do", "help me", "what do you do"],
+      "response": "Hi! I'm Aria, your TechGiants library assistant.\n\nI can help you:\n• **Find & suggest books** by genre, topic, or mood\n• **Check your borrowed books** and due dates\n• **Answer questions** about borrowing, returning, and your wallet\n\nWhat would you like today?"
+    },
+    {
+      "id": "how_to_borrow",
+      "keywords": ["how to borrow", "borrow a book", "request a book", "how do i borrow", "how to request", "get a book", "borrowing process", "how does borrowing work", "how can i borrow", "take out a book"],
+      "response": "Here's how to borrow a book:\n\n1. Go to the **Bookstore** tab\n2. Click on any book you like\n3. Click **Request Borrow**\n4. Choose how many days you want (1–30)\n5. Add an optional note\n\nThe admin reviews and approves your request. Once approved, the book appears in your **Now Reading** tab — borrowing is completely free!"
+    },
+    {
+      "id": "how_to_return",
+      "keywords": ["how to return", "return a book", "give back a book", "returning a book", "how do i return", "book return process", "return my book"],
+      "response": "To return a book:\n\n1. Go to the **Now Reading** tab\n2. Click the book you want to return\n3. Click **Return Book**\n4. Select the condition (excellent / good / fair / bad / damaged)\n5. Add a description if the condition is bad or damaged\n\nAlways return before or on the due date to avoid any penalties!"
+    },
+    {
+      "id": "extend_borrow",
+      "keywords": ["extend borrow", "extend due date", "need more time", "extra days", "extend period", "renew book", "borrow extension", "how to extend", "extend my book", "extend reading"],
+      "response": "You can extend a book's due date:\n\n1. Go to **Now Reading** tab\n2. Click the book → click **Request Extension**\n3. Choose extra days (max **7 days**) and give a reason\n\nYou can extend up to **2 times** per borrowing. The admin must approve it, so request early!"
+    },
+    {
+      "id": "wallet_info",
+      "keywords": ["wallet", "add money", "top up", "recharge", "how to add balance", "add funds", "how much money do i have", "wallet balance", "my funds", "add to wallet", "topup"],
+      "response": "Your wallet is used for optional paid features like **PDF downloads** (Rs 400 per book) and **extension fees** (Rs 80/day).\n\nBorrowing books is free — no wallet balance needed for that!\n\nTo top up your wallet:\n1. Find the **Wallet** section (bottom of sidebar)\n2. Enter the amount you want to add\n3. Confirm the top-up\n\nYour current balance is shown at the bottom of the sidebar at all times."
+    },
+    {
+      "id": "borrow_fee",
+      "keywords": ["how much", "price", "cost", "fee", "borrow fee", "borrowing fee", "how much does it cost", "how much to borrow", "rupees", "rs 1500", "charge for book"],
+      "response": "**Borrowing books is free!** No fee is charged when you borrow.\n\nYour wallet is only used for:\n• **PDF downloads** — Rs 400 per book\n• **Extension fees** — Rs 80 per extra day\n• **Lost book charges** — if a book is reported lost\n\nSo you can borrow and read without spending anything!"
+    },
+    {
+      "id": "overdue_info",
+      "keywords": ["overdue", "late book", "past due", "missed due date", "overdue book", "penalty", "fine", "late fee", "what happens if late", "book is overdue"],
+      "response": "If a book is not returned by its due date, it becomes **overdue** and will be marked in red in your **Now Reading** tab.\n\nTo avoid this:\n• Return on time\n• Or request an **extension** before the due date (max 7 days, up to 2 times)\n\nContact the admin if you're having trouble returning a book."
+    },
+    {
+      "id": "genres_available",
+      "keywords": ["what genres", "genres available", "types of books", "what kind of books", "what categories", "what books do you have", "available genres", "book categories"],
+      "response": "We have books across many genres:\n\n• **Fantasy** — LOTR, Dune, Harry Potter, Game of Thrones\n• **Fiction** — 1984, The Alchemist, Pride and Prejudice\n• **Science Fiction** — The Martian, Ender's Game, Foundation\n• **Self-Help** — Atomic Habits, Deep Work, Rich Dad Poor Dad\n• **History** — Sapiens, Guns Germs and Steel, Homo Deus\n• **Biography** — Steve Jobs, Becoming, Elon Musk\n• **Design** — The Design of Everyday Things, Don't Make Me Think\n• **Technology** — Clean Code, The Pragmatic Programmer\n• **Business** — Zero to One, Start with Why, The Lean Startup\n• **Science** — A Brief History of Time, A Short History of Nearly Everything\n\nAsk me to suggest books from any of these!"
+    },
+    {
+      "id": "suggest_any",
+      "keywords": ["suggest a book", "suggest me a book", "recommend a book", "recommend me a book", "what should i read", "any good books", "what do you recommend", "give me a recommendation", "any recommendations", "suggest something good", "pick a book for me", "any book suggestions", "suggest me something"],
+      "response": "I'd love to find you something great! Give me a little more to go on:\n\n• **Genre** — Fantasy, Fiction, Sci-Fi, Self-Help, Biography, History, Business, Technology?\n• **Mood** — *\"I'm feeling bored\"*, *\"something uplifting\"*, *\"I'm stressed\"*?\n• **Topic** — Space, magic, leadership, history, psychology, startups?\n• **Author** — Any favourite writer?\n\nFor example:\n• *\"best fantasy book\"*\n• *\"books about productivity\"*\n• *\"suggest me something, I'm feeling down\"*\n• *\"something by Tolkien\"*"
+    },
+    {
+      "id": "how_to_reserve",
+      "keywords": ["reserve a book", "how to reserve", "put on hold", "waitlist", "waiting list", "book queue", "queue for book", "hold a book", "book not available", "all copies borrowed", "can i reserve", "how do i reserve"],
+      "response": "If a book is currently borrowed, you can join the **waitlist**:\n\n1. Go to the **Bookstore** tab\n2. Open the book you want\n3. If it's borrowed, you'll see a **Join Waitlist** button\n4. Click it — you'll be notified when the book becomes available\n\nYou'll receive a notification as soon as it's returned and ready for you!"
+    },
+    {
+      "id": "pdf_download",
+      "keywords": ["pdf", "download book", "read pdf", "digital copy", "ebook", "download pdf", "read online", "digital book", "how to download", "pdf version", "read digitally", "download the book"],
+      "response": "You can download the **PDF version** of any book in our library:\n\n1. Go to the **Bookstore** tab\n2. Open any book\n3. Click **Download PDF**\n4. Rs **400** will be deducted from your wallet\n\nMake sure your wallet has enough balance before downloading. You can top up from the sidebar at any time."
+    },
+    {
+      "id": "fines_amounts",
+      "keywords": ["fine amount", "how much fine", "overdue fine amount", "damage fine", "how much for overdue", "fine for late", "late fine", "fine charges", "fine details", "fine breakdown", "what is the fine", "all fines", "complete fine list"],
+      "response": "Here's the complete fine breakdown at TechGiants Library:\n\n**Overdue Fines**\n• Rs **100 per day** for every day past the due date\n• Charged automatically when the book is returned\n\n**Damage Fines** (based on admin's condition assessment on return)\n• Excellent / Good — No fine ✅\n• Fair condition — Rs **200**\n• Bad condition — Rs **500**\n• Damaged — **80% of the book's price**\n\n**Extension Fees**\n• Rs **80 per day** (max 7 total extra days per borrow)\n\n**Lost Book**\n• **Full replacement price** of the book, charged on admin confirmation\n\n**PDF Downloads**\n• Rs **400** per book (permanent digital copy)\n\n💡 Borrowing is always free — charges only apply to overdue returns, damage, extensions, PDFs, or lost books!"
+    },
+    {
+      "id": "damaged_book_info",
+      "keywords": ["damaged book", "damage a book", "book damaged", "return damaged book", "returning damaged", "i damaged", "accidentally damaged", "damage fine", "damage charge", "damage fee", "condition when returning", "book condition fine", "fair condition", "bad condition", "damaged condition", "what condition", "80 percent book price", "condition fine breakdown", "how much damage fine", "damage history"],
+      "response": "**Returning a damaged book — what you need to know:**\n\nWhen returning, you select the book's condition. Here are the **damage fines**:\n\n• **Excellent / Good** — No fine ✅\n• **Fair condition** — Rs **200**\n• **Bad condition** — Rs **500**\n• **Damaged** — **80% of the book's price** (e.g. Rs 1,200 for a Rs 1,500 book)\n\n**How to return:**\n1. Go to **Now Reading** tab\n2. Click the book → **Return Book**\n3. Select the honest condition\n4. Add a description *(required for bad or damaged)*\n5. Submit — the admin verifies and charges the fine\n\n⚠️ **Important:** The admin determines the actual condition on inspection — the final fine is based on the admin's assessment, not just your selection. Always be honest!\n\n💡 Handle books with care to avoid any damage charges."
+    },
+    {
+      "id": "lost_book_info",
+      "keywords": ["lost book", "lose a book", "if i lose", "lost the book", "what if i lose", "book lost", "report lost", "lost my book", "accidentally lost", "misplaced book", "lost book charge", "lost book fee", "lost book fine", "replacement cost", "book replacement", "cancel lost report", "found book after reporting", "lost book status"],
+      "response": "**Lost a borrowed book? Here's what to do:**\n\n1. Go to the **Now Reading** tab\n2. Click the book → **Report as Lost**\n3. Confirm — the admin is notified immediately\n\n**What happens after reporting:**\n• Admin reviews and confirms the loss\n• The **full replacement price** of the book is deducted from your wallet\n• The borrowing is closed and marked as lost\n\n**All fine types for reference:**\n• Overdue — Rs 100/day\n• Fair condition — Rs 200\n• Bad condition — Rs 500\n• Damaged — 80% of book price\n• **Lost — full book price**\n\n💡 **Found the book before admin confirms?** Contact the admin immediately to cancel the report and avoid the charge!"
+    },
+    {
+      "id": "contact_help",
+      "keywords": ["contact admin", "help me", "need help", "report problem", "something wrong", "issue", "support", "who do i contact", "admin contact", "get help", "problem with account", "technical issue"],
+      "response": "Need help? Here's what you can do:\n\n• **For book issues** — Check the **Now Reading** tab for your current borrowings\n• **For account issues** — Open your **Profile** from the sidebar\n• **For billing/fine disputes** — The admin reviews all returns and charges\n• **For general questions** — Just ask me! I can answer most library questions\n\nIf you have a serious issue, look for the admin contact in the library notice board."
+    },
+    {
+      "id": "account_help",
+      "keywords": ["my account", "update profile", "change password", "edit profile", "profile settings", "my profile", "username", "account settings", "how to update", "change my name", "change my email"],
+      "response": "To manage your account:\n\n1. Click your **profile picture or name** at the bottom of the sidebar\n2. Your profile panel will open\n3. From there you can:\n   • View your wallet balance and top up\n   • Check your reading history\n   • See your borrowed books and due dates\n\nFor password changes or account issues, contact the library admin."
+    }
+  ],
+  "books": [
+    {
+      "id": "lord_of_the_rings",
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "year": 1954,
+      "description": "An epic high fantasy following hobbit Frodo Baggins on a quest to destroy the One Ring and defeat the Dark Lord Sauron.",
+      "topics": [
+        {"keywords": ["lord of the rings", "lotr", "tolkien", "j.r.r tolkien"], "weight": 3},
+        {"keywords": ["fantasy", "high fantasy", "epic fantasy"], "weight": 2.5},
+        {"keywords": ["hobbit", "frodo", "gandalf", "one ring", "middle earth", "sauron", "fellowship"], "weight": 2},
+        {"keywords": ["adventure", "quest", "journey", "classic"], "weight": 1.5},
+        {"keywords": ["magic", "wizard", "elf", "dwarf", "orc", "dragon"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "hobbit",
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "year": 1937,
+      "description": "A fantasy novel about the adventures of Bilbo Baggins in Middle-earth on a quest to reclaim a dwarf kingdom from a dragon.",
+      "topics": [
+        {"keywords": ["hobbit", "tolkien", "bilbo", "bilbo baggins"], "weight": 3},
+        {"keywords": ["fantasy", "middle earth", "dragon", "smaug"], "weight": 2.5},
+        {"keywords": ["adventure", "quest", "dwarves", "gandalf"], "weight": 2},
+        {"keywords": ["classic", "magic", "prequel"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "harry_potter",
+      "title": "Harry Potter and the Philosopher's Stone",
+      "author": "J.K. Rowling",
+      "genre": "Fantasy",
+      "year": 1997,
+      "description": "A young boy discovers he is a wizard and enters Hogwarts School of Witchcraft and Wizardry where he learns of his remarkable destiny.",
+      "topics": [
+        {"keywords": ["harry potter", "rowling", "j.k rowling", "hogwarts"], "weight": 3},
+        {"keywords": ["fantasy", "magic", "wizard", "witch", "spell"], "weight": 2.5},
+        {"keywords": ["school", "friendship", "adventure", "voldemort"], "weight": 2},
+        {"keywords": ["young adult", "children", "coming of age"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "game_of_thrones",
+      "title": "A Game of Thrones",
+      "author": "George R.R. Martin",
+      "genre": "Fantasy",
+      "year": 1996,
+      "description": "The first book in A Song of Ice and Fire, following the power struggle for the Iron Throne of the Seven Kingdoms of Westeros.",
+      "topics": [
+        {"keywords": ["game of thrones", "george r.r martin", "grrm", "song of ice and fire"], "weight": 3},
+        {"keywords": ["fantasy", "epic fantasy", "dark fantasy", "westeros"], "weight": 2.5},
+        {"keywords": ["politics", "war", "power", "throne", "kingdom", "betrayal"], "weight": 2},
+        {"keywords": ["dragons", "knights", "medieval", "series"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "dune",
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "genre": "Fantasy",
+      "year": 1965,
+      "description": "Set in a distant future, Paul Atreides navigates political intrigue, religion, and survival on the desert planet Arrakis.",
+      "topics": [
+        {"keywords": ["dune", "frank herbert", "arrakis", "paul atreides"], "weight": 3},
+        {"keywords": ["science fiction", "fantasy", "desert planet", "spice"], "weight": 2.5},
+        {"keywords": ["politics", "religion", "survival", "ecology"], "weight": 2},
+        {"keywords": ["epic", "classic", "space", "prophecy"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "name_of_the_wind",
+      "title": "The Name of the Wind",
+      "author": "Patrick Rothfuss",
+      "genre": "Fantasy",
+      "year": 2007,
+      "description": "The autobiography of the legendary wizard Kvothe, widely known as the most notorious figure his world has ever seen.",
+      "topics": [
+        {"keywords": ["name of the wind", "rothfuss", "kvothe", "kingkiller"], "weight": 3},
+        {"keywords": ["fantasy", "magic", "wizard", "legend"], "weight": 2.5},
+        {"keywords": ["adventure", "music", "academy", "cleverness"], "weight": 2},
+        {"keywords": ["storytelling", "mythology", "series"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "chronicles_of_narnia",
+      "title": "The Chronicles of Narnia",
+      "author": "C.S. Lewis",
+      "genre": "Fantasy",
+      "year": 1950,
+      "description": "Seven fantasy novels set in the world of Narnia where animals talk, magic is real, and the great lion Aslan watches over all.",
+      "topics": [
+        {"keywords": ["narnia", "c.s lewis", "aslan", "chronicles of narnia"], "weight": 3},
+        {"keywords": ["fantasy", "magic", "lion", "children fantasy"], "weight": 2.5},
+        {"keywords": ["adventure", "classic", "allegory", "christian"], "weight": 2},
+        {"keywords": ["young adult", "series", "good vs evil"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "1984",
+      "title": "1984",
+      "author": "George Orwell",
+      "genre": "Fiction",
+      "year": 1949,
+      "description": "A dystopian novel set in a totalitarian society ruled by Big Brother, following Winston Smith's rebellion against oppressive surveillance.",
+      "topics": [
+        {"keywords": ["1984", "george orwell", "orwell", "nineteen eighty four"], "weight": 3},
+        {"keywords": ["dystopia", "dystopian", "totalitarianism", "surveillance"], "weight": 2.5},
+        {"keywords": ["big brother", "thought police", "propaganda", "freedom"], "weight": 2},
+        {"keywords": ["classic", "political", "dark", "society", "control"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "to_kill_mockingbird",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": "Fiction",
+      "year": 1960,
+      "description": "Young Scout Finch watches her father Atticus defend a Black man falsely accused of a crime in the American South, exploring justice and morality.",
+      "topics": [
+        {"keywords": ["to kill a mockingbird", "harper lee", "atticus", "atticus finch"], "weight": 3},
+        {"keywords": ["classic", "fiction", "american literature"], "weight": 2.5},
+        {"keywords": ["justice", "racism", "morality", "law", "courage"], "weight": 2},
+        {"keywords": ["coming of age", "childhood", "social issues", "society"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "great_gatsby",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": "Fiction",
+      "year": 1925,
+      "description": "A portrait of the Jazz Age in all its decadence, centering on the mysterious millionaire Jay Gatsby and his obsession with Daisy Buchanan.",
+      "topics": [
+        {"keywords": ["great gatsby", "fitzgerald", "f scott fitzgerald", "gatsby"], "weight": 3},
+        {"keywords": ["classic", "fiction", "american dream", "jazz age"], "weight": 2.5},
+        {"keywords": ["wealth", "love", "obsession", "society", "parties"], "weight": 2},
+        {"keywords": ["romance", "tragedy", "1920s", "america"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "pride_and_prejudice",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "genre": "Fiction",
+      "year": 1813,
+      "description": "The romantic story of Elizabeth Bennet and Mr. Darcy, exploring love, class, and social expectations in Regency England.",
+      "topics": [
+        {"keywords": ["pride and prejudice", "jane austen", "austen", "elizabeth bennet", "mr darcy"], "weight": 3},
+        {"keywords": ["romance", "classic", "fiction", "love story"], "weight": 2.5},
+        {"keywords": ["society", "marriage", "class", "manners", "england"], "weight": 2},
+        {"keywords": ["regency", "british", "humor", "wit"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "alchemist",
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "genre": "Fiction",
+      "year": 1988,
+      "description": "A philosophical novel about a young shepherd named Santiago who travels from Spain to Egypt in search of his personal legend.",
+      "topics": [
+        {"keywords": ["alchemist", "paulo coelho", "coelho", "santiago", "personal legend"], "weight": 3},
+        {"keywords": ["philosophy", "journey", "self discovery", "spiritual"], "weight": 2.5},
+        {"keywords": ["destiny", "dreams", "adventure", "motivational"], "weight": 2},
+        {"keywords": ["inspirational", "life lessons", "meaning", "purpose"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "brave_new_world",
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "genre": "Fiction",
+      "year": 1932,
+      "description": "A dystopian novel set in a future World State of genetically modified citizens and an intelligence-based social hierarchy.",
+      "topics": [
+        {"keywords": ["brave new world", "aldous huxley", "huxley"], "weight": 3},
+        {"keywords": ["dystopia", "dystopian", "science fiction", "future society"], "weight": 2.5},
+        {"keywords": ["technology", "control", "freedom", "happiness", "conditioning"], "weight": 2},
+        {"keywords": ["classic", "political", "philosophical", "dark"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "animal_farm",
+      "title": "Animal Farm",
+      "author": "George Orwell",
+      "genre": "Fiction",
+      "year": 1945,
+      "description": "A satirical allegory about farm animals who rebel against their farmer, only to find corruption and tyranny emerge from within.",
+      "topics": [
+        {"keywords": ["animal farm", "george orwell", "orwell"], "weight": 3},
+        {"keywords": ["satire", "allegory", "political", "communism"], "weight": 2.5},
+        {"keywords": ["power", "corruption", "revolution", "society"], "weight": 2},
+        {"keywords": ["classic", "short", "novella", "dark humor"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "kite_runner",
+      "title": "The Kite Runner",
+      "author": "Khaled Hosseini",
+      "genre": "Fiction",
+      "year": 2003,
+      "description": "A story of friendship, betrayal, and redemption set against the backdrop of Afghanistan from the 1970s to the early 2000s.",
+      "topics": [
+        {"keywords": ["kite runner", "khaled hosseini", "hosseini", "afghanistan"], "weight": 3},
+        {"keywords": ["friendship", "redemption", "betrayal", "guilt"], "weight": 2.5},
+        {"keywords": ["emotional", "dramatic", "war", "family"], "weight": 2},
+        {"keywords": ["middle east", "culture", "childhood", "sacrifice"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "da_vinci_code",
+      "title": "The Da Vinci Code",
+      "author": "Dan Brown",
+      "genre": "Fiction",
+      "year": 2003,
+      "description": "Symbologist Robert Langdon investigates a murder in the Louvre and uncovers a trail of clues hidden in the works of Leonardo da Vinci.",
+      "topics": [
+        {"keywords": ["da vinci code", "dan brown", "robert langdon", "da vinci"], "weight": 3},
+        {"keywords": ["thriller", "mystery", "conspiracy", "religion"], "weight": 2.5},
+        {"keywords": ["murder", "symbols", "history", "secret society", "holy grail"], "weight": 2},
+        {"keywords": ["fast paced", "exciting", "page turner", "paris"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "enders_game",
+      "title": "Ender's Game",
+      "author": "Orson Scott Card",
+      "genre": "Science Fiction",
+      "year": 1985,
+      "description": "Child prodigy Ender Wiggin is trained at a space military academy to lead Earth's forces against an alien invasion.",
+      "topics": [
+        {"keywords": ["enders game", "ender's game", "orson scott card", "ender wiggin"], "weight": 3},
+        {"keywords": ["science fiction", "sci fi", "space", "military", "aliens"], "weight": 2.5},
+        {"keywords": ["strategy", "genius", "war", "children", "training"], "weight": 2},
+        {"keywords": ["classic sci fi", "adventure", "future", "coming of age"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "martian",
+      "title": "The Martian",
+      "author": "Andy Weir",
+      "genre": "Science Fiction",
+      "year": 2011,
+      "description": "Astronaut Mark Watney is stranded alone on Mars after a fierce storm and must use his ingenuity and humor to survive.",
+      "topics": [
+        {"keywords": ["the martian", "andy weir", "mark watney", "mars"], "weight": 3},
+        {"keywords": ["science fiction", "sci fi", "space", "survival", "nasa"], "weight": 2.5},
+        {"keywords": ["humor", "science", "engineering", "problem solving"], "weight": 2},
+        {"keywords": ["funny", "adventure", "realistic", "alone"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "foundation",
+      "title": "Foundation",
+      "author": "Isaac Asimov",
+      "genre": "Science Fiction",
+      "year": 1951,
+      "description": "A group of scientists preserve the knowledge of humanity as the Galactic Empire crumbles around them.",
+      "topics": [
+        {"keywords": ["foundation", "isaac asimov", "asimov", "hari seldon"], "weight": 3},
+        {"keywords": ["science fiction", "sci fi", "galactic empire", "space opera"], "weight": 2.5},
+        {"keywords": ["civilization", "knowledge", "prediction", "future"], "weight": 2},
+        {"keywords": ["classic", "intellectual", "epic", "series"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "hitchhikers_guide",
+      "title": "The Hitchhiker's Guide to the Galaxy",
+      "author": "Douglas Adams",
+      "genre": "Science Fiction",
+      "year": 1979,
+      "description": "The comedic adventure of Arthur Dent, the last surviving human, swept into a wildly improbable journey across the galaxy.",
+      "topics": [
+        {"keywords": ["hitchhiker's guide", "hitchhiker guide", "douglas adams", "adams", "42"], "weight": 3},
+        {"keywords": ["science fiction", "sci fi", "comedy", "humor", "satire"], "weight": 2.5},
+        {"keywords": ["space", "adventure", "funny", "absurd", "galaxy"], "weight": 2},
+        {"keywords": ["classic", "witty", "light hearted", "unique"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "ready_player_one",
+      "title": "Ready Player One",
+      "author": "Ernest Cline",
+      "genre": "Science Fiction",
+      "year": 2011,
+      "description": "In a dystopian future, teenager Wade Watts discovers clues to a massive fortune hidden inside a virtual reality game.",
+      "topics": [
+        {"keywords": ["ready player one", "ernest cline", "cline", "oasis"], "weight": 3},
+        {"keywords": ["science fiction", "sci fi", "virtual reality", "gaming", "vr"], "weight": 2.5},
+        {"keywords": ["dystopia", "adventure", "treasure hunt", "pop culture"], "weight": 2},
+        {"keywords": ["80s", "nostalgia", "technology", "future", "young adult"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "atomic_habits",
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "genre": "Self-Help",
+      "year": 2018,
+      "description": "An easy and proven way to build good habits and break bad ones, using tiny changes that deliver remarkable results.",
+      "topics": [
+        {"keywords": ["atomic habits", "james clear", "clear", "habits"], "weight": 3},
+        {"keywords": ["self help", "productivity", "habits", "behaviour change"], "weight": 2.5},
+        {"keywords": ["improvement", "routine", "discipline", "goals"], "weight": 2},
+        {"keywords": ["motivation", "success", "personal development", "growth"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "seven_habits",
+      "title": "The 7 Habits of Highly Effective People",
+      "author": "Stephen Covey",
+      "genre": "Self-Help",
+      "year": 1989,
+      "description": "A framework for personal and professional effectiveness built on seven core habits that align character and competence.",
+      "topics": [
+        {"keywords": ["7 habits", "seven habits", "stephen covey", "covey", "highly effective"], "weight": 3},
+        {"keywords": ["self help", "productivity", "leadership", "effectiveness"], "weight": 2.5},
+        {"keywords": ["character", "principles", "work life", "success", "mindset"], "weight": 2},
+        {"keywords": ["classic", "personal development", "business", "management"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "think_and_grow_rich",
+      "title": "Think and Grow Rich",
+      "author": "Napoleon Hill",
+      "genre": "Self-Help",
+      "year": 1937,
+      "description": "One of the best-selling self-help books of all time, distilling the philosophy of personal achievement from 500 successful people.",
+      "topics": [
+        {"keywords": ["think and grow rich", "napoleon hill", "hill"], "weight": 3},
+        {"keywords": ["self help", "success", "wealth", "mindset", "motivation"], "weight": 2.5},
+        {"keywords": ["money", "achievement", "desire", "persistence"], "weight": 2},
+        {"keywords": ["classic", "financial", "inspiration", "personal development"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "how_to_win_friends",
+      "title": "How to Win Friends and Influence People",
+      "author": "Dale Carnegie",
+      "genre": "Self-Help",
+      "year": 1936,
+      "description": "Timeless advice on building relationships, communicating effectively, and becoming a more likable and influential person.",
+      "topics": [
+        {"keywords": ["how to win friends", "dale carnegie", "carnegie", "influence people"], "weight": 3},
+        {"keywords": ["self help", "communication", "relationships", "social skills"], "weight": 2.5},
+        {"keywords": ["people skills", "persuasion", "networking", "influence"], "weight": 2},
+        {"keywords": ["classic", "business", "leadership", "confidence"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "deep_work",
+      "title": "Deep Work",
+      "author": "Cal Newport",
+      "genre": "Self-Help",
+      "year": 2016,
+      "description": "Rules for focused success in a distracted world. The ability to perform deep work is becoming rare and increasingly valuable.",
+      "topics": [
+        {"keywords": ["deep work", "cal newport", "newport", "focus"], "weight": 3},
+        {"keywords": ["self help", "productivity", "focus", "concentration", "distraction"], "weight": 2.5},
+        {"keywords": ["work habits", "career", "achievement", "discipline"], "weight": 2},
+        {"keywords": ["modern life", "technology", "performance", "success"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "rich_dad_poor_dad",
+      "title": "Rich Dad Poor Dad",
+      "author": "Robert Kiyosaki",
+      "genre": "Self-Help",
+      "year": 1997,
+      "description": "A personal finance classic contrasting two fathers' financial philosophies, advocating for financial literacy and investing in assets.",
+      "topics": [
+        {"keywords": ["rich dad poor dad", "kiyosaki", "robert kiyosaki"], "weight": 3},
+        {"keywords": ["self help", "finance", "money", "investing", "financial freedom"], "weight": 2.5},
+        {"keywords": ["assets", "wealth", "passive income", "business"], "weight": 2},
+        {"keywords": ["classic", "beginner finance", "mindset", "financial literacy"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "psychology_of_money",
+      "title": "The Psychology of Money",
+      "author": "Morgan Housel",
+      "genre": "Self-Help",
+      "year": 2020,
+      "description": "Timeless lessons on wealth, greed, and happiness, exploring the strange ways people think about money.",
+      "topics": [
+        {"keywords": ["psychology of money", "morgan housel", "housel"], "weight": 3},
+        {"keywords": ["self help", "finance", "money", "investing", "wealth"], "weight": 2.5},
+        {"keywords": ["psychology", "behaviour", "happiness", "decision making"], "weight": 2},
+        {"keywords": ["modern finance", "simple", "insightful", "beginner"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "sapiens",
+      "title": "Sapiens",
+      "author": "Yuval Noah Harari",
+      "genre": "History",
+      "year": 2011,
+      "description": "A brief history of humankind that challenges everything we know about being human, from our origins to modern society.",
+      "topics": [
+        {"keywords": ["sapiens", "yuval noah harari", "harari", "history of humankind"], "weight": 3},
+        {"keywords": ["history", "humanity", "evolution", "civilization", "human history"], "weight": 2.5},
+        {"keywords": ["philosophy", "science", "culture", "religion", "economics"], "weight": 2},
+        {"keywords": ["nonfiction", "popular science", "thought provoking"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "diary_young_girl",
+      "title": "The Diary of a Young Girl",
+      "author": "Anne Frank",
+      "genre": "History",
+      "year": 1947,
+      "description": "The wartime diary of Anne Frank, a Jewish girl hiding in Amsterdam during the Nazi occupation, a poignant testament to the human spirit.",
+      "topics": [
+        {"keywords": ["anne frank", "diary of a young girl", "anne frank diary"], "weight": 3},
+        {"keywords": ["history", "world war 2", "holocaust", "ww2", "nazi"], "weight": 2.5},
+        {"keywords": ["diary", "memoir", "survival", "courage", "hope"], "weight": 2},
+        {"keywords": ["biography", "real story", "emotional", "classic"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "guns_germs_steel",
+      "title": "Guns, Germs, and Steel",
+      "author": "Jared Diamond",
+      "genre": "History",
+      "year": 1997,
+      "description": "A study of why some civilizations came to dominate others, exploring the geographic and environmental factors that shaped history.",
+      "topics": [
+        {"keywords": ["guns germs and steel", "jared diamond", "diamond"], "weight": 3},
+        {"keywords": ["history", "civilization", "geography", "anthropology"], "weight": 2.5},
+        {"keywords": ["society", "power", "culture", "food", "technology"], "weight": 2},
+        {"keywords": ["nonfiction", "popular science", "world history", "economics"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "homo_deus",
+      "title": "Homo Deus",
+      "author": "Yuval Noah Harari",
+      "genre": "History",
+      "year": 2015,
+      "description": "A look at the future of humanity once we surpass the limitations that have defined our species for millennia.",
+      "topics": [
+        {"keywords": ["homo deus", "yuval harari", "harari", "future of humanity"], "weight": 3},
+        {"keywords": ["history", "future", "technology", "artificial intelligence", "transhumanism"], "weight": 2.5},
+        {"keywords": ["philosophy", "religion", "society", "evolution", "progress"], "weight": 2},
+        {"keywords": ["nonfiction", "thought provoking", "sequel to sapiens"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "art_of_war",
+      "title": "The Art of War",
+      "author": "Sun Tzu",
+      "genre": "History",
+      "year": 2002,
+      "description": "An ancient Chinese military treatise on strategy, tactics, and the philosophy of conflict, applicable to business and everyday life.",
+      "topics": [
+        {"keywords": ["art of war", "sun tzu", "sun zi", "tzu"], "weight": 3},
+        {"keywords": ["strategy", "philosophy", "military", "tactics", "ancient"], "weight": 2.5},
+        {"keywords": ["leadership", "business strategy", "competition", "wisdom"], "weight": 2},
+        {"keywords": ["classic", "short", "chinese", "timeless"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "book_of_five_rings",
+      "title": "Book of Five Rings",
+      "author": "Miyamoto Musashi",
+      "genre": "History",
+      "year": 1880,
+      "description": "A classic text on Japanese swordsmanship and strategy by legendary samurai Miyamoto Musashi, applicable to any competitive endeavor.",
+      "topics": [
+        {"keywords": ["book of five rings", "musashi", "miyamoto musashi", "five rings"], "weight": 3},
+        {"keywords": ["strategy", "philosophy", "martial arts", "samurai", "japanese"], "weight": 2.5},
+        {"keywords": ["leadership", "discipline", "combat", "wisdom", "tactics"], "weight": 2},
+        {"keywords": ["classic", "ancient", "short", "warrior"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "brief_history_of_time",
+      "title": "A Brief History of Time",
+      "author": "Stephen Hawking",
+      "genre": "Science",
+      "year": 1988,
+      "description": "A landmark in science writing exploring the cosmos, the Big Bang, black holes, and the fundamental laws governing the universe.",
+      "topics": [
+        {"keywords": ["brief history of time", "stephen hawking", "hawking"], "weight": 3},
+        {"keywords": ["science", "physics", "cosmology", "universe", "space"], "weight": 2.5},
+        {"keywords": ["black holes", "big bang", "time", "gravity", "relativity"], "weight": 2},
+        {"keywords": ["classic", "popular science", "accessible", "nonfiction"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "short_history_everything",
+      "title": "A Short History of Nearly Everything",
+      "author": "Bill Bryson",
+      "genre": "Science",
+      "year": 2003,
+      "description": "An accessible and witty tour through the history of science, covering the Big Bang, evolution, and the rise of civilization.",
+      "topics": [
+        {"keywords": ["short history of nearly everything", "bill bryson", "bryson"], "weight": 3},
+        {"keywords": ["science", "history of science", "universe", "earth", "evolution"], "weight": 2.5},
+        {"keywords": ["funny", "accessible", "nonfiction", "popular science", "biology"], "weight": 2},
+        {"keywords": ["chemistry", "physics", "geology", "entertaining"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "steve_jobs",
+      "title": "Steve Jobs",
+      "author": "Walter Isaacson",
+      "genre": "Biography",
+      "year": 2011,
+      "description": "The exclusive biography of Apple co-founder Steve Jobs, drawn from over 40 interviews with Jobs himself.",
+      "topics": [
+        {"keywords": ["steve jobs", "isaacson", "walter isaacson", "apple"], "weight": 3},
+        {"keywords": ["biography", "tech leader", "entrepreneur", "silicon valley"], "weight": 2.5},
+        {"keywords": ["innovation", "creativity", "design", "leadership", "business"], "weight": 2},
+        {"keywords": ["inspiring", "technology", "genius", "perfectionism"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "becoming",
+      "title": "Becoming",
+      "author": "Michelle Obama",
+      "genre": "Biography",
+      "year": 2018,
+      "description": "The memoir of the former First Lady of the United States, tracing her journey from Chicago's South Side to the White House.",
+      "topics": [
+        {"keywords": ["becoming", "michelle obama", "obama", "first lady"], "weight": 3},
+        {"keywords": ["biography", "memoir", "autobiography", "white house"], "weight": 2.5},
+        {"keywords": ["inspiration", "empowerment", "identity", "race", "politics"], "weight": 2},
+        {"keywords": ["women", "leadership", "family", "america", "motivational"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "long_walk_to_freedom",
+      "title": "Long Walk to Freedom",
+      "author": "Nelson Mandela",
+      "genre": "Biography",
+      "year": 1994,
+      "description": "The autobiography of Nelson Mandela, covering his childhood, his fight against apartheid, 27 years in prison, and his rise to presidency.",
+      "topics": [
+        {"keywords": ["long walk to freedom", "nelson mandela", "mandela"], "weight": 3},
+        {"keywords": ["biography", "autobiography", "memoir", "apartheid", "south africa"], "weight": 2.5},
+        {"keywords": ["freedom", "justice", "courage", "leadership", "prison"], "weight": 2},
+        {"keywords": ["inspiring", "politics", "history", "struggle", "human rights"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "elon_musk",
+      "title": "Elon Musk",
+      "author": "Walter Isaacson",
+      "genre": "Biography",
+      "year": 2023,
+      "description": "An intimate biography of Elon Musk exploring the polarizing entrepreneur behind Tesla, SpaceX, and X (formerly Twitter).",
+      "topics": [
+        {"keywords": ["elon musk", "tesla", "spacex", "isaacson"], "weight": 3},
+        {"keywords": ["biography", "entrepreneur", "tech billionaire", "innovation"], "weight": 2.5},
+        {"keywords": ["electric cars", "rockets", "space", "twitter", "x"], "weight": 2},
+        {"keywords": ["controversial", "genius", "risk taker", "modern"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "leonardo_da_vinci",
+      "title": "Leonardo da Vinci",
+      "author": "Walter Isaacson",
+      "genre": "Biography",
+      "year": 2017,
+      "description": "A biography of history's most creative genius, Leonardo da Vinci, drawing on 7,200 pages of his extraordinary notebooks.",
+      "topics": [
+        {"keywords": ["leonardo da vinci", "da vinci", "isaacson", "leonardo"], "weight": 3},
+        {"keywords": ["biography", "art", "science", "renaissance", "genius"], "weight": 2.5},
+        {"keywords": ["painting", "invention", "curiosity", "creativity", "notebooks"], "weight": 2},
+        {"keywords": ["history", "italy", "masterpiece", "inspiration"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "design_everyday_things",
+      "title": "The Design of Everyday Things",
+      "author": "Don Norman",
+      "genre": "Design",
+      "year": 2013,
+      "description": "A powerful primer on how and why some products satisfy customers while others frustrate them, changing how you see designed objects.",
+      "topics": [
+        {"keywords": ["design of everyday things", "don norman", "norman", "everyday things"], "weight": 3},
+        {"keywords": ["design", "ux", "usability", "user experience", "product design"], "weight": 2.5},
+        {"keywords": ["psychology", "human factors", "affordance", "ergonomics"], "weight": 2},
+        {"keywords": ["classic", "must read", "designer", "product"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "dont_make_me_think",
+      "title": "Don't Make Me Think",
+      "author": "Steve Krug",
+      "genre": "Design",
+      "year": 2000,
+      "description": "A classic guide to web usability explaining how real users interact with websites and how to design for intuitive, effortless navigation.",
+      "topics": [
+        {"keywords": ["don't make me think", "dont make me think", "steve krug", "krug"], "weight": 3},
+        {"keywords": ["design", "web design", "usability", "ux", "user experience"], "weight": 2.5},
+        {"keywords": ["website", "navigation", "interface", "user testing"], "weight": 2},
+        {"keywords": ["practical", "short", "web development", "designer"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "logo_design_love",
+      "title": "Logo Design Love",
+      "author": "David Airey",
+      "genre": "Design",
+      "year": 2010,
+      "description": "A guide to creating iconic brand identities for designers, covering the process of designing lasting logos.",
+      "topics": [
+        {"keywords": ["logo design love", "david airey", "airey", "logo design"], "weight": 3},
+        {"keywords": ["design", "graphic design", "logo", "branding", "brand identity"], "weight": 2.5},
+        {"keywords": ["visual design", "typography", "identity", "creative"], "weight": 2},
+        {"keywords": ["practical", "beginner designer", "professional"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "strategic_writing_ux",
+      "title": "Strategic Writing for UX",
+      "author": "Torrey Podmajersky",
+      "genre": "Design",
+      "year": 2019,
+      "description": "Drive engagement, conversion, and retention with every word. A guide to UX writing and content design strategy.",
+      "topics": [
+        {"keywords": ["strategic writing for ux", "ux writing", "podmajersky", "torrey"], "weight": 3},
+        {"keywords": ["design", "ux", "writing", "content design", "user experience"], "weight": 2.5},
+        {"keywords": ["copywriting", "interface", "engagement", "product writing"], "weight": 2},
+        {"keywords": ["practical", "modern", "digital product"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "web_design_evolution",
+      "title": "Web Design: Evolution",
+      "author": "Multiple Authors",
+      "genre": "Technology",
+      "year": 2020,
+      "description": "A comprehensive look at how web design has evolved from the early internet to today's modern practices.",
+      "topics": [
+        {"keywords": ["web design evolution", "web design", "web development history"], "weight": 3},
+        {"keywords": ["design", "technology", "internet", "html", "css", "frontend"], "weight": 2.5},
+        {"keywords": ["history of web", "modern web", "digital design"], "weight": 2},
+        {"keywords": ["reference", "overview", "technology"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "clean_code",
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "genre": "Technology",
+      "year": 2008,
+      "description": "A handbook of agile software craftsmanship presenting best practices for writing clean, readable, and maintainable code.",
+      "topics": [
+        {"keywords": ["clean code", "robert martin", "uncle bob", "martin", "clean architecture"], "weight": 3},
+        {"keywords": ["programming", "software development", "coding", "technology"], "weight": 2.5},
+        {"keywords": ["best practices", "refactoring", "software engineering", "java"], "weight": 2},
+        {"keywords": ["must read programmer", "developer", "computer science"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "pragmatic_programmer",
+      "title": "The Pragmatic Programmer",
+      "author": "Andrew Hunt",
+      "genre": "Technology",
+      "year": 1999,
+      "description": "A guide covering the core processes of software development, helping programmers become more effective and pragmatic in their craft.",
+      "topics": [
+        {"keywords": ["pragmatic programmer", "andrew hunt", "hunt", "dave thomas"], "weight": 3},
+        {"keywords": ["programming", "software development", "coding", "technology"], "weight": 2.5},
+        {"keywords": ["career", "best practices", "software craft", "developer"], "weight": 2},
+        {"keywords": ["classic", "must read programmer", "professional", "computer science"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "zero_to_one",
+      "title": "Zero to One",
+      "author": "Peter Thiel",
+      "genre": "Business",
+      "year": 2014,
+      "description": "Notes on startups and how to build the future. Peter Thiel challenges conventional thinking about innovation and entrepreneurship.",
+      "topics": [
+        {"keywords": ["zero to one", "peter thiel", "thiel", "startup"], "weight": 3},
+        {"keywords": ["business", "entrepreneurship", "startups", "innovation"], "weight": 2.5},
+        {"keywords": ["technology", "venture capital", "competition", "monopoly"], "weight": 2},
+        {"keywords": ["modern", "silicon valley", "future", "building"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "good_to_great",
+      "title": "Good to Great",
+      "author": "Jim Collins",
+      "genre": "Business",
+      "year": 2001,
+      "description": "A research-driven study of how certain companies made the leap from good to truly great and sustained that greatness for 15+ years.",
+      "topics": [
+        {"keywords": ["good to great", "jim collins", "collins"], "weight": 3},
+        {"keywords": ["business", "leadership", "management", "company culture"], "weight": 2.5},
+        {"keywords": ["strategy", "discipline", "success", "excellence"], "weight": 2},
+        {"keywords": ["classic", "corporate", "research based", "nonfiction"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "lean_startup",
+      "title": "The Lean Startup",
+      "author": "Eric Ries",
+      "genre": "Business",
+      "year": 2011,
+      "description": "A new approach to building companies and launching products that is changing how startups operate around the world.",
+      "topics": [
+        {"keywords": ["lean startup", "eric ries", "ries", "mvp"], "weight": 3},
+        {"keywords": ["business", "startup", "entrepreneurship", "product"], "weight": 2.5},
+        {"keywords": ["innovation", "agile", "iteration", "customer", "growth"], "weight": 2},
+        {"keywords": ["modern", "practical", "methodology", "build measure learn"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "start_with_why",
+      "title": "Start with Why",
+      "author": "Simon Sinek",
+      "genre": "Business",
+      "year": 2009,
+      "description": "Explores how leaders like Apple and Martin Luther King inspired action by starting with WHY rather than what or how.",
+      "topics": [
+        {"keywords": ["start with why", "simon sinek", "sinek", "golden circle"], "weight": 3},
+        {"keywords": ["business", "leadership", "motivation", "purpose", "vision"], "weight": 2.5},
+        {"keywords": ["inspiration", "why", "company culture", "brand"], "weight": 2},
+        {"keywords": ["ted talk", "popular", "management", "strategy"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "thinking_fast_slow",
+      "title": "Thinking, Fast and Slow",
+      "author": "Daniel Kahneman",
+      "genre": "Business",
+      "year": 2011,
+      "description": "A groundbreaking exploration of the two systems that drive the way we think, make decisions, and understand the world.",
+      "topics": [
+        {"keywords": ["thinking fast and slow", "daniel kahneman", "kahneman"], "weight": 3},
+        {"keywords": ["psychology", "decision making", "cognitive bias", "behaviour"], "weight": 2.5},
+        {"keywords": ["mind", "rationality", "intuition", "economics", "thinking"], "weight": 2},
+        {"keywords": ["nonfiction", "popular science", "academic", "thought provoking"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "one_year_on_bike",
+      "title": "One Year on a Bike",
+      "author": "Martijn Doolaard",
+      "genre": "Non-Fiction",
+      "year": 2020,
+      "description": "A stunning visual journey across Eurasia by bicycle from Amsterdam to Southeast Asia, with breathtaking photography.",
+      "topics": [
+        {"keywords": ["one year on a bike", "martijn doolaard", "doolaard", "bike"], "weight": 3},
+        {"keywords": ["travel", "cycling", "adventure", "journey", "photography"], "weight": 2.5},
+        {"keywords": ["europe", "asia", "solo travel", "exploration"], "weight": 2},
+        {"keywords": ["beautiful", "visual", "nonfiction", "outdoors"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "into_the_wild",
+      "title": "Into the Wild",
+      "author": "Jon Krakauer",
+      "genre": "Non-Fiction",
+      "year": 1996,
+      "description": "The story of Chris McCandless who abandoned his possessions and hitchhiked to Alaska to live alone in the wilderness.",
+      "topics": [
+        {"keywords": ["into the wild", "jon krakauer", "krakauer", "chris mccandless"], "weight": 3},
+        {"keywords": ["nonfiction", "adventure", "survival", "wilderness", "alaska"], "weight": 2.5},
+        {"keywords": ["freedom", "nature", "solo", "travel", "real story"], "weight": 2},
+        {"keywords": ["inspiring", "tragic", "true story", "outdoors"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "art_of_travel",
+      "title": "The Art of Travel",
+      "author": "Alain de Botton",
+      "genre": "Non-Fiction",
+      "year": 2002,
+      "description": "A philosophical meditation blending memoir and analysis on why we travel, what we seek, and what travel reveals about us.",
+      "topics": [
+        {"keywords": ["art of travel", "alain de botton", "de botton", "botton"], "weight": 3},
+        {"keywords": ["nonfiction", "travel", "philosophy", "life", "meaning"], "weight": 2.5},
+        {"keywords": ["reflection", "culture", "beauty", "art", "nature"], "weight": 2},
+        {"keywords": ["thoughtful", "literary", "unique", "essay"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "101_amazing_switzerland",
+      "title": "101 Amazing Switzerland",
+      "author": "Various",
+      "genre": "Non-Fiction",
+      "year": 2018,
+      "description": "Discover 101 incredible things to see and do in beautiful Switzerland, from alpine peaks to charming cities.",
+      "topics": [
+        {"keywords": ["101 amazing switzerland", "switzerland", "swiss"], "weight": 3},
+        {"keywords": ["travel", "tourism", "guide", "europe", "alps"], "weight": 2.5},
+        {"keywords": ["nonfiction", "places", "adventure", "nature"], "weight": 2},
+        {"keywords": ["photography", "beautiful", "reference"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "crime_and_punishment",
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "genre": "Fiction",
+      "year": 1866,
+      "description": "A psychological novel following Raskolnikov, a poverty-stricken student who commits a murder and grapples with guilt and redemption.",
+      "topics": [
+        {"keywords": ["crime and punishment", "dostoevsky", "fyodor dostoevsky", "raskolnikov"], "weight": 3},
+        {"keywords": ["classic", "russian literature", "psychological", "philosophy"], "weight": 2.5},
+        {"keywords": ["guilt", "morality", "redemption", "murder", "psychology"], "weight": 2},
+        {"keywords": ["dark", "intense", "literary", "19th century"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "count_of_monte_cristo",
+      "title": "The Count of Monte Cristo",
+      "author": "Alexandre Dumas",
+      "genre": "Fiction",
+      "year": 1844,
+      "description": "The gripping tale of Edmond Dantès, wrongfully imprisoned, who escapes and executes an elaborate plan of revenge against those who betrayed him.",
+      "topics": [
+        {"keywords": ["count of monte cristo", "alexandre dumas", "dumas", "edmond dantes"], "weight": 3},
+        {"keywords": ["adventure", "revenge", "classic", "fiction", "france"], "weight": 2.5},
+        {"keywords": ["betrayal", "justice", "wealth", "disguise", "epic"], "weight": 2},
+        {"keywords": ["long book", "historical", "19th century", "swashbuckling"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "catcher_in_the_rye",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "genre": "Fiction",
+      "year": 1951,
+      "description": "Teenager Holden Caulfield narrates his experiences after being expelled from prep school, exploring identity, alienation, and growing up.",
+      "topics": [
+        {"keywords": ["catcher in the rye", "j.d salinger", "salinger", "holden caulfield"], "weight": 3},
+        {"keywords": ["coming of age", "teen", "identity", "alienation", "fiction"], "weight": 2.5},
+        {"keywords": ["rebellion", "youth", "growing up", "classic", "america"], "weight": 2},
+        {"keywords": ["controversial", "literary", "first person", "voice"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "hundred_years_solitude",
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel Garcia Marquez",
+      "genre": "Fiction",
+      "year": 1967,
+      "description": "The multi-generational story of the Buendía family in the fictional town of Macondo, a landmark of magical realism.",
+      "topics": [
+        {"keywords": ["one hundred years of solitude", "gabriel garcia marquez", "marquez", "macondo"], "weight": 3},
+        {"keywords": ["magical realism", "classic", "literary fiction", "latin america"], "weight": 2.5},
+        {"keywords": ["family saga", "generations", "mythology", "love", "war"], "weight": 2},
+        {"keywords": ["nobel prize", "colombian", "epic", "masterpiece"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "fahrenheit_451",
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "genre": "Science Fiction",
+      "year": 1953,
+      "description": "In a dystopian future where books are outlawed and burned, fireman Guy Montag begins to question the society he serves.",
+      "topics": [
+        {"keywords": ["fahrenheit 451", "ray bradbury", "bradbury", "guy montag"], "weight": 3},
+        {"keywords": ["dystopia", "dystopian", "science fiction", "censorship", "books"], "weight": 2.5},
+        {"keywords": ["freedom", "knowledge", "society", "fire", "rebellion"], "weight": 2},
+        {"keywords": ["classic sci fi", "short", "thought provoking", "dark"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "neuromancer",
+      "title": "Neuromancer",
+      "author": "William Gibson",
+      "genre": "Science Fiction",
+      "year": 1984,
+      "description": "The cyberpunk classic following a washed-up hacker hired for one last job deep into a world of artificial intelligence and crime.",
+      "topics": [
+        {"keywords": ["neuromancer", "william gibson", "gibson", "cyberpunk"], "weight": 3},
+        {"keywords": ["science fiction", "hacker", "ai", "artificial intelligence", "cyber"], "weight": 2.5},
+        {"keywords": ["technology", "future", "virtual reality", "noir", "crime"], "weight": 2},
+        {"keywords": ["classic sci fi", "dark", "gritty", "1980s"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "i_robot",
+      "title": "I, Robot",
+      "author": "Isaac Asimov",
+      "genre": "Science Fiction",
+      "year": 1950,
+      "description": "A collection of stories exploring the relationship between humans and robots, governed by Asimov's famous Three Laws of Robotics.",
+      "topics": [
+        {"keywords": ["i robot", "i, robot", "isaac asimov", "asimov", "three laws"], "weight": 3},
+        {"keywords": ["science fiction", "robots", "ai", "artificial intelligence"], "weight": 2.5},
+        {"keywords": ["ethics", "technology", "future", "short stories", "logic"], "weight": 2},
+        {"keywords": ["classic sci fi", "collection", "philosophy"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "hunger_games",
+      "title": "The Hunger Games",
+      "author": "Suzanne Collins",
+      "genre": "Science Fiction",
+      "year": 2008,
+      "description": "In a dystopian future, teenager Katniss Everdeen volunteers for the televised Hunger Games fight-to-the-death competition to save her sister.",
+      "topics": [
+        {"keywords": ["hunger games", "suzanne collins", "collins", "katniss", "katniss everdeen"], "weight": 3},
+        {"keywords": ["dystopia", "dystopian", "science fiction", "survival", "young adult"], "weight": 2.5},
+        {"keywords": ["action", "adventure", "rebellion", "arena", "competition"], "weight": 2},
+        {"keywords": ["series", "teen", "popular", "movie"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "divergent",
+      "title": "Divergent",
+      "author": "Veronica Roth",
+      "genre": "Science Fiction",
+      "year": 2011,
+      "description": "In a future Chicago divided into factions, Beatrice Prior discovers she is Divergent and uncovers a conspiracy threatening her society.",
+      "topics": [
+        {"keywords": ["divergent", "veronica roth", "roth", "beatrice prior", "tris"], "weight": 3},
+        {"keywords": ["dystopia", "science fiction", "young adult", "faction"], "weight": 2.5},
+        {"keywords": ["identity", "courage", "action", "romance", "rebellion"], "weight": 2},
+        {"keywords": ["series", "teen", "popular", "movie"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "eragon",
+      "title": "Eragon",
+      "author": "Christopher Paolini",
+      "genre": "Fantasy",
+      "year": 2003,
+      "description": "A young farm boy named Eragon finds a mysterious stone that hatches into a dragon, beginning an epic journey of adventure and destiny.",
+      "topics": [
+        {"keywords": ["eragon", "christopher paolini", "paolini", "inheritance cycle"], "weight": 3},
+        {"keywords": ["fantasy", "dragon", "magic", "epic fantasy", "adventure"], "weight": 2.5},
+        {"keywords": ["hero journey", "young adult", "rider", "quest", "swords"], "weight": 2},
+        {"keywords": ["series", "coming of age", "tolkien like"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "percy_jackson",
+      "title": "Percy Jackson and the Lightning Thief",
+      "author": "Rick Riordan",
+      "genre": "Fantasy",
+      "year": 2005,
+      "description": "A 12-year-old boy discovers he is the son of a Greek god and embarks on a quest to prevent a war among the Olympians.",
+      "topics": [
+        {"keywords": ["percy jackson", "rick riordan", "riordan", "lightning thief"], "weight": 3},
+        {"keywords": ["fantasy", "greek mythology", "gods", "olympus", "magic"], "weight": 2.5},
+        {"keywords": ["adventure", "quest", "young adult", "children", "fun"], "weight": 2},
+        {"keywords": ["series", "mythology", "comedy", "coming of age"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "power_of_habit",
+      "title": "The Power of Habit",
+      "author": "Charles Duhigg",
+      "genre": "Self-Help",
+      "year": 2012,
+      "description": "Explains the science behind why habits exist and how they can be changed, drawing on research in neuroscience and psychology.",
+      "topics": [
+        {"keywords": ["power of habit", "charles duhigg", "duhigg", "habit loop"], "weight": 3},
+        {"keywords": ["self help", "habits", "productivity", "neuroscience", "behaviour"], "weight": 2.5},
+        {"keywords": ["routine", "change", "psychology", "discipline", "science"], "weight": 2},
+        {"keywords": ["personal development", "business", "motivation"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "outliers",
+      "title": "Outliers",
+      "author": "Malcolm Gladwell",
+      "genre": "Non-Fiction",
+      "year": 2008,
+      "description": "Examines the factors that contribute to high levels of success, exploring the stories of outliers and what makes them extraordinary.",
+      "topics": [
+        {"keywords": ["outliers", "malcolm gladwell", "gladwell", "10000 hours"], "weight": 3},
+        {"keywords": ["success", "nonfiction", "psychology", "achievement"], "weight": 2.5},
+        {"keywords": ["talent", "practice", "opportunity", "culture", "genius"], "weight": 2},
+        {"keywords": ["popular science", "inspiring", "thought provoking"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "tipping_point",
+      "title": "The Tipping Point",
+      "author": "Malcolm Gladwell",
+      "genre": "Non-Fiction",
+      "year": 2000,
+      "description": "Explores how little things can make a big difference — the moment when ideas, trends, and social behaviours spread like wildfire.",
+      "topics": [
+        {"keywords": ["tipping point", "malcolm gladwell", "gladwell"], "weight": 3},
+        {"keywords": ["nonfiction", "social science", "trends", "viral", "behaviour"], "weight": 2.5},
+        {"keywords": ["marketing", "ideas", "epidemics", "change", "influence"], "weight": 2},
+        {"keywords": ["popular science", "business", "psychology"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "blink",
+      "title": "Blink",
+      "author": "Malcolm Gladwell",
+      "genre": "Non-Fiction",
+      "year": 2005,
+      "description": "Investigates the power of thinking without thinking — how snap judgements and first impressions can be more powerful than careful deliberation.",
+      "topics": [
+        {"keywords": ["blink", "malcolm gladwell", "gladwell", "thin slicing"], "weight": 3},
+        {"keywords": ["nonfiction", "psychology", "decision making", "intuition"], "weight": 2.5},
+        {"keywords": ["snap judgement", "unconscious", "instinct", "behaviour"], "weight": 2},
+        {"keywords": ["popular science", "mind", "thought provoking"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "ikigai",
+      "title": "Ikigai",
+      "author": "Hector Garcia",
+      "genre": "Self-Help",
+      "year": 2016,
+      "description": "The Japanese concept of ikigai — a reason for being — explored through the lives of the world's longest-living people in Okinawa.",
+      "topics": [
+        {"keywords": ["ikigai", "hector garcia", "garcia", "reason for being"], "weight": 3},
+        {"keywords": ["self help", "purpose", "meaning", "happiness", "japanese"], "weight": 2.5},
+        {"keywords": ["longevity", "wellbeing", "life philosophy", "zen", "calm"], "weight": 2},
+        {"keywords": ["short", "inspiring", "mindfulness", "lifestyle"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "selfish_gene",
+      "title": "The Selfish Gene",
+      "author": "Richard Dawkins",
+      "genre": "Science",
+      "year": 1976,
+      "description": "A landmark work in evolutionary biology arguing that genes, not individuals or species, are the primary unit of natural selection.",
+      "topics": [
+        {"keywords": ["selfish gene", "richard dawkins", "dawkins", "meme"], "weight": 3},
+        {"keywords": ["science", "evolution", "biology", "genetics", "nature"], "weight": 2.5},
+        {"keywords": ["darwin", "natural selection", "genes", "survival"], "weight": 2},
+        {"keywords": ["classic science", "popular science", "thought provoking"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "cosmos",
+      "title": "Cosmos",
+      "author": "Carl Sagan",
+      "genre": "Science",
+      "year": 1980,
+      "description": "A sweeping exploration of the universe and humanity's place in it, blending science, philosophy, and wonder in Carl Sagan's signature style.",
+      "topics": [
+        {"keywords": ["cosmos", "carl sagan", "sagan", "pale blue dot"], "weight": 3},
+        {"keywords": ["science", "universe", "space", "astronomy", "philosophy"], "weight": 2.5},
+        {"keywords": ["stars", "planets", "evolution", "wonder", "humanity"], "weight": 2},
+        {"keywords": ["classic science", "popular science", "inspiring", "beautiful"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "freakonomics",
+      "title": "Freakonomics",
+      "author": "Steven Levitt",
+      "genre": "Non-Fiction",
+      "year": 2005,
+      "description": "A rogue economist explores the hidden side of everything, applying economic thinking to topics ranging from drug dealing to parenting.",
+      "topics": [
+        {"keywords": ["freakonomics", "steven levitt", "levitt", "stephen dubner"], "weight": 3},
+        {"keywords": ["economics", "nonfiction", "statistics", "behaviour", "data"], "weight": 2.5},
+        {"keywords": ["unusual", "funny", "counterintuitive", "social science"], "weight": 2},
+        {"keywords": ["popular science", "thought provoking", "surprising"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "i_am_malala",
+      "title": "I Am Malala",
+      "author": "Malala Yousafzai",
+      "genre": "Biography",
+      "year": 2013,
+      "description": "The remarkable story of a young Pakistani girl who defied the Taliban to advocate for girls' education and survived an assassination attempt.",
+      "topics": [
+        {"keywords": ["i am malala", "malala", "yousafzai", "malala yousafzai"], "weight": 3},
+        {"keywords": ["biography", "memoir", "education", "courage", "pakistan"], "weight": 2.5},
+        {"keywords": ["women", "human rights", "activism", "inspiring", "taliban"], "weight": 2},
+        {"keywords": ["true story", "real", "young", "nobel prize"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "open_agassi",
+      "title": "Open",
+      "author": "Andre Agassi",
+      "genre": "Biography",
+      "year": 2009,
+      "description": "The candid autobiography of tennis legend Andre Agassi, revealing his love-hate relationship with tennis and his journey to redemption.",
+      "topics": [
+        {"keywords": ["open agassi", "andre agassi", "agassi", "tennis"], "weight": 3},
+        {"keywords": ["biography", "autobiography", "sports", "tennis", "champion"], "weight": 2.5},
+        {"keywords": ["redemption", "fame", "struggle", "identity", "candid"], "weight": 2},
+        {"keywords": ["inspiring", "athlete", "honest", "personal"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "me_before_you",
+      "title": "Me Before You",
+      "author": "Jojo Moyes",
+      "genre": "Fiction",
+      "year": 2012,
+      "description": "A heartwarming and emotional love story about a small-town girl and a recently paralyzed man who opens her world in unexpected ways.",
+      "topics": [
+        {"keywords": ["me before you", "jojo moyes", "moyes", "louisa clark", "will traynor"], "weight": 3},
+        {"keywords": ["romance", "love story", "emotional", "fiction"], "weight": 2.5},
+        {"keywords": ["disability", "life choices", "heartbreaking", "tender"], "weight": 2},
+        {"keywords": ["women fiction", "movie", "popular", "tearjerker"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "the_notebook",
+      "title": "The Notebook",
+      "author": "Nicholas Sparks",
+      "genre": "Fiction",
+      "year": 1996,
+      "description": "A timeless love story about two young people from different backgrounds who fall deeply in love during one magical summer in the 1940s.",
+      "topics": [
+        {"keywords": ["the notebook", "nicholas sparks", "sparks", "noah", "allie"], "weight": 3},
+        {"keywords": ["romance", "love story", "emotional", "fiction", "classic romance"], "weight": 2.5},
+        {"keywords": ["heartwarming", "summer love", "devotion", "memory"], "weight": 2},
+        {"keywords": ["movie", "popular", "tearjerker", "beautiful"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "subtle_art",
+      "title": "The Subtle Art of Not Giving a F*ck",
+      "author": "Mark Manson",
+      "genre": "Self-Help",
+      "year": 2016,
+      "description": "A counterintuitive approach to living a good life, arguing that improving our lives hinges on choosing what truly matters to us.",
+      "topics": [
+        {"keywords": ["subtle art", "mark manson", "manson", "not giving"], "weight": 3},
+        {"keywords": ["self help", "philosophy", "mindset", "values", "happiness"], "weight": 2.5},
+        {"keywords": ["counterintuitive", "blunt", "modern", "funny", "honest"], "weight": 2},
+        {"keywords": ["popular", "bestseller", "life advice", "attitude"], "weight": 1.5}
+      ]
+    },
+    {
+      "id": "mans_search_for_meaning",
+      "title": "Man Search for Meaning",
+      "author": "Viktor Frankl",
+      "genre": "Non-Fiction",
+      "year": 1946,
+      "description": "A Holocaust survivor and psychiatrist describes his psychotherapeutic method of finding meaning in all forms of existence, even the most brutal ones.",
+      "topics": [
+        {"keywords": ["man search for meaning", "mans search for meaning", "viktor frankl", "frankl", "logotherapy"], "weight": 3},
+        {"keywords": ["philosophy", "meaning", "purpose", "psychology", "suffering"], "weight": 2.5},
+        {"keywords": ["holocaust", "survival", "hope", "resilience", "prison"], "weight": 2},
+        {"keywords": ["classic", "profound", "short", "life changing", "inspiring"], "weight": 1.5}
+      ]
+    }
+  ]
+}
